@@ -1,0 +1,23 @@
+CD Numbers
+==========
+This symbol font was made for your CDs, especially, if you like to use those old track number symbols.
+It contains the track numbers in square boxes, a(P) in a circle and the A and D in square boxes for analog/digital recording etc.
+
+There are two different character forms for the numbers:
+Serif forms on 1..9 and then A..Z
+Sansserif forms on f..z
+
+(P) is on p (sans) and q (serif)
+
+A and D in a box are on a and d, for obvious reasons. The char length is such that they blend together when you type aad or ddd or similar.
+
+You may use this font for commercial and non-commercial purposes at no cost and at your own risk.
+There is no warranty whatsoever. You get what you pay for.
+
+Do not share or redistribute this font without this readme file. Have fun.
+
+May 2013
+Andreas Höfeld
+Fontgrube AH
+
+
