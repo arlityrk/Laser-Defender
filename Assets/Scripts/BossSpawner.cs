@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSpawner1 : MonoBehaviour {
+public class BossSpawner : MonoBehaviour {
 
 	public GameObject bossPrefab;
 	private bool bossSpawned = false;
