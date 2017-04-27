@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BossSpawner.cs" />
+     <Compile Include="Assets\Scripts\BossSpawner1.cs" />
      <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
@@ -57,6 +59,7 @@
      <Compile Include="Assets\Scripts\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\ScoreKeeper.cs" />
      <Compile Include="Assets\Scripts\Shredder.cs" />
+     <Compile Include="Assets\Scripts\Wave.cs" />
      <None Include="Assets\Fonts\read me.txt" />
      <None Include="Assets\Fonts\license.txt" />
      <None Include="Assets\Fonts\cdnumbers.txt" />

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealthTracker : MonoBehaviour {
 
 	public int playerHealth;
-	public int initialPlayerHealth = 1000;
+	public int initialPlayerHealth = 100000;
 	Text textObject;
 
 	// Use this for initialization

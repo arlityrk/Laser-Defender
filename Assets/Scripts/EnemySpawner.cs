@@ -14,9 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 	private bool movingRight = true;
 	private float minX;
 	private float maxX;
-	private int wave = 1;
 
-	// Use this for initialization
 	void Start () {
 		float distance = this.transform.position.z - Camera.main.transform.position.z;
 		Vector3 leftEdge = Camera.main.ViewportToWorldPoint (new Vector3(0,0,distance));
@@ -26,8 +24,7 @@ public class EnemySpawner : MonoBehaviour {
 
 		SpawnEnemies ();
 	}
-
-	// Update is called once per frame
+		
 	void Update () {
 
 		float rightEdgeOfFormation = transform.position.x + (0.5f*width);
@@ -46,9 +43,10 @@ public class EnemySpawner : MonoBehaviour {
 		}
 
 		if(AllMembersDead()) {
-			wave++;
-			SpawnUntilFull ();
-			Debug.Log (wave);
+			if (Wave.wave != 3) {
+				SpawnUntilFull ();
+				Debug.Log ("wave: "+ Wave.wave);
+			}
 		}
 	}
 
@@ -57,26 +55,26 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	void SpawnEnemies() {
-
-		foreach (Transform child in this.transform){
-			GameObject enemy = Instantiate (smallEnemyPrefab, child.transform.position,Quaternion.identity) as GameObject;
-			enemy.transform.parent = child;
-		}
+			foreach (Transform child in this.transform) {
+				GameObject enemy = Instantiate (smallEnemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
+				enemy.transform.parent = child;
+			}
 	}
 
 	void SpawnUntilFull() {
 		GameObject enemyPrefab = smallEnemyPrefab;
 
-		if(wave >= 2){
+		if(Wave.wave >= 2){
 			enemyPrefab = mediumEnemyPrefab;
-			Debug.Log ("Assigning enemy medium");
 		}
 
 		Transform freePosition = NextFreePosition ();
+
 		if(freePosition) {
 			GameObject enemy = Instantiate (enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
 		enemy.transform.parent = freePosition;
 		}
+
 		if (freePosition) {
 			Invoke ("SpawnUntilFull", spawnDelay);
 		}

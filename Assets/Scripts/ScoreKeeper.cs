@@ -20,6 +20,5 @@ public class ScoreKeeper : MonoBehaviour {
 
 	public static void Reset() {
 		score = 0;
-		//textObject.text = string.Concat("SCORE: ", score.ToString());
 	}
 }
